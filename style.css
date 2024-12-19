@@ -1,0 +1,101 @@
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #ff5733;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #ffd700;
+}
+
+/* Fixed Left Section */
+.left-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertical Center */
+    align-items: center; /* Horizontal Center */
+    text-align: center;
+    border-right: 2px solid #7a7a7a;
+}
+
+.left-fixed img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px; /* Square shape with rounded corners */
+    object-fit: cover;
+    box-shadow: 
+        5px 5px 0px #ff5733, /* First shadow in orange */
+        10px 10px 0px #ffd700; /* Second shadow in yellow */
+    margin-bottom: 20px;
+}
+
+.left-fixed h1 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.left-fixed p {
+    font-size: 14px;
+    color: #7a7a7a;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 320px;
+    padding: 30px;
+}
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff5733;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 60px; /* Added spacing between sections */
+}
+
+/* Project Cards */
+.project-card {
+    background-color: #fffefe;
+    border: 1px solid #7a7a7a;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 14px rgba(255, 87, 51, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .left-fixed {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
